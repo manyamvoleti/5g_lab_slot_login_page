@@ -1,222 +1,301 @@
-<html>
-    <head>
-        <title>Login</title>
-        <style>
-            
-            body {
-                position: relative;
-                width: 100%;
-                background-image:  url(https://t4.ftcdn.net/jpg/02/54/67/69/240_F_254676947_SHegKGWyQqlgaDBg21PEg3twBHEP2qsL.jpg);
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                background-size: cover;
-                background-color: #7a91f5;
-                background-blend-mode: darken;
-                min-height: 100vh;
-                overflow: hidden;
-            }
-            
-            table {
-                width: 650px;
-                height: 360px; 
-                margin: 1px;
-                padding-right: 10rem; 
-                border-radius: 5px;
-            }
-            div.a {
-                margin: 50px;
-                padding: 5px;
-                text-align: center;
-                text-transform: uppercase;
-                font-family: verdana;
-                font-size: 2rem;
-                font-weight: 700;
-                color: #f1eff7;
-                text-shadow: 1px 1px 1px #3307fa,
-                             1px 2px 1px #3307fa,
-                             1px 3px 1px #3307fa,
-                             1px 4px 1px #3307fa,
-                             1px 5px 1px #3307fa,
-                             1px 6px 1px #3307fa,
-                             1px 7px 1px #3307fa,
-                         1px 10px 6px rgba(245, 247, 248, 0.4),
-                         1px 15px 10px rgba(245, 247, 248, 0.4),
-                         1px 15px 20px rgba(245, 247, 248, 0.4),
-                         1px 15px 30px rgba(245, 247, 248, 0.4);
-            }
-            input[type="text" i] {
-                font-style: oblique;
-                border-color: #f1eff7;
-                font-weight: bold;
-                max-width: 380px;
-                width: 100%;
-                height: 40px;
-                background-color: rgb(129, 243, 247);
-                margin: 10px 0;
-                border-radius: 55px;
-                display: grid;
-                grid-template-columns: 15% 85%;
-                padding: 0 50px;
-                position: relative;
-            }
-            input[type="password" i] {
-                font-style: oblique;
-                border-color: #faf7f4;
-                font-weight: bold;
-                max-width: 380px;
-                width: 100%;
-                height: 40px;
-                background-color: rgb(128, 226, 250);
-                margin: 5px 0;
-                border-radius: 55px;
-                display: grid;
-                grid-template-columns: 30% 70%;
-                padding: 0 50px;
-                position: relative;
-            }
-            input[type="submit" i] {
-                max-width: 380px;
-                font-weight: bolder;
-                color: #faf7f4;
-                border-color: #f1eff7;
-                font-size: medium;
-                width: 50%;
-                height: 30px;
-                background-color: rgb(25, 9, 248);
-                margin: 10px 0;
-                border-radius: 55px;
-                display: grid;
-                grid-template-columns: 15% 85%;
-                padding: 0 0.4rem;
-                position: relative;
-            }
-            input[type="submit" i]:hover {
-                background-color: rgb(168, 9, 241);
-                transform: scale(1.03);
-            }
-            input[type="submit" i]:active {
-                transform: translateY(3px) scale(.97); 
-            }
-            div.c {
-                
-                padding: 10px;
-                background-color: #f44336;
-                margin: 0 20px;
-                width: 95%;
-                border-radius: 10px;
-                position: relative;
-                text-shadow: 1px 1px 1px #fa1807,
-                             1px 2px 1px #fa1807;
-                margin-left: 15px;
-                color: white;
-                float: left;
-                font-size: 22px;
-                bottom: 9rem;
-                line-height: 20px;
-                cursor: pointer;
-                transition: 0.3s;
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Login</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
-                }
-            .d:hover {
-                color: rgb(30, 7, 243);
-                
+body{
+  font-family: 'Poppins', sans-serif;
+  background: white;
+}
+div.a {
+    margin: 10px;
+    padding: 5px;
+    text-align: left;
+    text-transform: uppercase;
+    font-family: verdana;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1b0361;
+    border-bottom: 2px solid rgb(134, 123, 161);
+    text-shadow: 1px 1px 1px #3307fa,
+                 1px 2px 1px #3307fa,
+                 1px 3px 1px #3307fa;
             }
-            
-        </style>
-        
-    </head>
-    <body>
-        <img src="https://www.hfcl.com/images/HFCL_White.png" width="120" hight="200" align="left" />
-       
-        <div class="a">
+
+.show-btn{
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(28, 5, 158);
+    cursor: pointer;
+    background-color: rgb(227, 225, 248);
+    border-radius: 55px;
+    position: absolute;
+    left: 80%;
+    top: 20px ;
+    transform: translate(-50%, -50%);
+    border-color: #15016e;
+    
+}
+.show-botton {
+    position: relative;
+    left: 36%;
+    bottom: 50px;
+}
+.btn {
+    position: relative;
+    left: 42%;
+    bottom: 87px;
+}
+.botton {
+    position: relative;
+    left: 47%;
+    bottom: 123px;
+}
+input[type="checkbox"]{
+    display: none;
+    
+}
+
+#show:checked ~ .container{
+    display: block;
+}
+
+.container{
+    display: none;
+    width: 350px;
+    padding: 20px;
+    border-radius: 4px;
+    background: rgba(252, 252, 253, 0.822);
+    border: 1px solid rgb(60, 8, 248);
+    border-radius: 20px;
+
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%)
+}
+.container .close-btn{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.close-btn:hover{
+    color: rgb(23, 5, 102);
+}
+h1{
+    text-align: center;
+    color: rgb(6, 3, 48);
+    text-transform: uppercase;
+}
+
+form{
+    margin: 20px;
+}
+label{
+    display: block;
+    color: rgb(14, 25, 121);
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+input{
+    display: block;
+    width: 90%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(28, 15, 87);
+    padding: 10px;
+    color: rgb(48, 31, 110);
+}
+
+button{
+    display: block;
+    width: 95%;
+    padding: 8px;
+    border: none;
+    outline: none;
+    background: linear-gradient(to right, #6d6eca, 
+    #07002c);
+    color: rgb(237, 235, 243);
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+
+}
+.showbotton {
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(28, 5, 158);
+    cursor: pointer;
+    background-color: rgb(227, 225, 248);
+    border-radius: 55px;
+    position: absolute;
+    left: 90%;
+    top: 20px ;
+    transform: translate(-50%, -50%);
+    border-color: #15016e;
+}
+input[type="checkbox-1"]{
+    display: none;
+    
+}
+
+#show-1:checked ~ .container-1{
+    display: block;
+}
+.container-1{
+    display: none;
+    width: 350px;
+    padding: 20px;
+    border-radius: 4px;
+    background: rgba(252, 252, 253, 0.822);
+    border: 1px solid rgb(60, 8, 248);
+    border-radius: 20px;
+
+}
+.container-1{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+.container-1 .close-botton{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.close-botton:hover{
+    color: rgb(23, 5, 102);
+}
+h1{
+    text-align: center;
+    color: rgb(6, 3, 48);
+    text-transform: uppercase;
+}
+
+form{
+    margin: 20px;
+}
+label[for=text]{
+    display: block;
+    color: rgb(14, 25, 121);
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+input[type=text], input[type=password]{
+    display: block;
+    width: 90%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(28, 15, 87);
+    padding: 10px;
+    color: rgb(48, 31, 110);
+}
+
+.signupbtn{
+    display: block;
+    width: 95%;
+    padding: 8px;
+    border: none;
+    outline: none;
+    background: linear-gradient(to right, #6d6eca, 
+    #07002c);
+    color: rgb(237, 235, 243);
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+
+}
+
+
+    </style>
+</head>
+<script>
+    $(".toggle-password").click(function() {
+
+$(this).toggleClass("fa-eye fa-eye-slash");
+var input = $($(this).attr("toggle"));
+if (input.attr("type") == "password") {
+  input.attr("type", "text");
+} else {
+  input.attr("type", "password");
+}
+});
+</script>
+<body>
+    <div class="a">
            
           
-            Lab Slot Booking
-          
-        </div>
-        {%
-            if error != null
-        %}
-         <tr>
-            <div class="c">
-            <td colspan="2">
-               {{error}}
-               <span class="d" onclick="this.parentElement.style.display='none';" style="position: relative; left: 70rem;">&times;</span>
-            </td>
-            </div>
-         </tr>       
-        {% endif %}  
+        HFCL
+      
+    </div>
+
+    
+
+    <input type="checkbox" id="show">
+    <label for="show" class="show-btn">Login</label>
+    <label for="show" class="show-botton">Home</label>
+    <label for="show" class="btn">FAQs</label>
+    <label for="show" class="botton">About</label>
+
+    <div class="container">
+        <label for="show" class="close-btn" title="close">×</label>
+        <h1>5G Lab Slot Booking</h1>
+        <form action="#">
+            <label>UserName</label>
+            <input type="text">
+            <label>Password</label>
+            <input type="password">
+            <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+            <a href="#">Forgot Password?</a>
+            <button>Login</button>
+            <div class="link">Login only <a href="#">ADMIN here</a></div>
         
-         <br/><br/><br/><br/>
-        <div align="center">
-            <form acton="/" method="post">
-                <table align="right">
-                     <tr>
-                        <div class="b">
-                         <td>
-                            <font color="white" style="font-size: 20;"> <b>Username(Email)</b>
-                          </font>
-                             
-                         </td>
-                         
-                
-                        
-                        <td>
-                            
-                            <input type="text" placeholder="Enter Email" name="email" required>
-                        
-                        </td>
-                        </div>
-                    </tr>
-                    <tr>
-                        <td>
-                            <font color="white" style="font-size: 20;"> <b>Password</b>
-                         </font>
-                        </td>
-                        <td>
-                            <input type="password" placeholder="Enter Password" name="password" required>
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                       <td colspan=""></td>
-                       <td>
-                             <input type="submit" value="Login"/>
-                             
-                        </td>
-                      
-                        
-                    </tr>
-                    <tr>
-                        <td colspan=""></td>
-                        <td>
-                            <a href="/Loginwithadm&RD" style="color:#faf7f4; font-weight: bold; font-style: italic; ">Login with Admin/R&D</a>
-                              
-                         </td>
-                       
-                         
-                     </tr>
-                     <tr>
-                        <td colspan="2">&nbsp;</td>
-                         
-                     </tr>
-                    <tr>
-                        <td></td>
-                        <td>
-                            <a href="/SignUp" style="color:rgb(61, 11, 243); font-weight: bolder; width: 50%; height: 30px; background-color: rgb(248, 245, 245); text-decoration: none; padding:1px 0.8rem; border-color: #0d0d0e; margin: 10px 0; border-radius: 55px; ">Sign Up </a>
-
-
-                            
-                        </td>
-
-                    </tr>
-        
-
-
-                </table>
-            </form>
             
-        </div>
-       
-    </body>
+        <closeform></closeform></form>
+    </div>
+    <input type="checkbox-1" id="show-1">
+    <label for="show-1" class="showbotton">SignUp</label>
+    <div class="container-1">
+        <label for="show-1" class="close-botton" title="close">×</label>
+        <h1>5G Lab Slot Booking</h1>
+        <form action="#">
+            <label for="text">Full name</label>
+            <input type="text" placeholder="Enter Name" name="username" id="username">
+            <label for="text"> Mobile  </label>  
+            <input type="text" name="country_code"  value="+91" size="3"/>   
+            <input type="text" placeholder="Mobile" name="phone" id="phone" size="10"><br>
+            <label for="text">Email</label>
+            <input type="text" placeholder="Enter Email" name="email" id="email">
+            <label for="text">Password</label>
+            <input type="password" placeholder="Enter Password" name="password" id="password">
+            <label for="text">Repeat Password</label>
+            <input type="password" placeholder="Repeat Password" name="password_repeat" id="password_repeat" >
+            <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+            <a href="#">Forgot Password?</a>
+            <button type="submit" class="signupbtn">SignUp</button>
+            
+        
+            
+        <closeform></closeform></form>
+    </div>
+</body>
 </html>
